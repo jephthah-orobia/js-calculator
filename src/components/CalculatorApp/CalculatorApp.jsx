@@ -1,22 +1,15 @@
-import React, { useState } from "react";
-import ThemeContext, { themes } from "./calculatorApp.context";
+import React, { useReducer } from "react";
 import style from "./calculatorApp.module.css";
 import DisplayStatus from "./features/DisplayStatus/DisplayStatus";
 import DisplayInput from "./features/DisplayInput/DisplayInput";
 import DisplayOutput from "./features/DisplayOutput/DisplayOutput";
-
-export const DIGIT = "operator",
-  OPERATOR = "operator",
-  LETTER = "letter";
+import NumparationButton from "./features/NumparationsButton/NumparationsButton";
+import reducer, { initialState } from "./calculatorApp.reducer";
+import DigOpActions from "./dataActions/DigOpActions";
 
 export default function CalculatorApp() {
-  const [inputs, setInputs] = useState([
-    { className: "", type: DIGIT, text: 1 },
-    { className: "", type: OPERATOR, text: "+" },
-    { className: "current", type: DIGIT, text: 2 },
-  ]);
+  const [display, dispatch] = useReducer(reducer, initialState);
 
-  const [output, setOutput] = useState(3);
   return (
     <div className={style.calcAppContainer}>
       <div className={style.calcAppHeader}>
@@ -31,12 +24,21 @@ export default function CalculatorApp() {
               { text: "Math ▲", className: "" },
             ]}
           />
-          <DisplayInput inputs={inputs} />
-          <DisplayOutput output={output} />
+          <DisplayInput inputs={display.input} />
+          <DisplayOutput output={display.output} />
         </div>
       </div>
-      <div className={style.calcAppControl}>Misc Button Here</div>
-      <div className={style.calcAppNumparations}>Numeric Buttons Bere</div>
+      <div className={style.calcAppNumparations}>
+        {DigOpActions.map((item, i) => (
+          <NumparationButton
+            key={i}
+            id={item.id}
+            label={item.label}
+            action={() => dispatch(item.action)}
+            bg={item.bg}
+          />
+        ))}
+      </div>
     </div>
   );
 }

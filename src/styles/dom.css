@@ -5,15 +5,23 @@
 html {
   font-size: 16px;
   line-height: 1rem;
-  vertical-align: center;
+  vertical-align: middle;
 }
 html,
 body {
   margin: 0;
-  padding: 0.5rem;
   background-color: darkslategray;
 }
 
 body {
+  padding: 0.7rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: gray;
 }
