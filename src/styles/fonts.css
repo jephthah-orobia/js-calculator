@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "OPTICalculator";
+  src: url("../../public/webfonts/OPTICalculator.ttf.woff") format("woff"),
+    url("../../public/webfonts/OPTICalculator.ttf.svg#OPTICalculator")
+      format("svg"),
+    url("../../public/webfonts/OPTICalculator.ttf.eot"),
+    url("../../public/webfonts/OPTICalculator.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LED-Calculator";
+  src: url("../../public/webfonts/LED-Calculator.ttf.woff") format("woff"),
+    url("../../public/webfonts/LED-Calculator.ttf.svg#LED-Calculator")
+      format("svg"),
+    url("../../public/webfonts/LED-Calculator.ttf.eot"),
+    url("../../public/webfonts/LED-Calculator.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,21 @@
+.DisplayStatus {
+  height: 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.DisplayStatus > li {
+  display: inline;
+  height: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+  padding: 0 1px;
+  margin: 0;
+}

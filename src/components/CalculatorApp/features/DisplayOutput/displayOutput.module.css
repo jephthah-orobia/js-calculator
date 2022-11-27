@@ -1,0 +1,10 @@
+.DisplayOutput {
+  background-color: #51655d;
+  height: calc(100% - 2rem);
+  font-weight: 900;
+  line-height: 100%;
+  font-size: 2.5rem;
+  vertical-align: bottom;
+  text-align: end;
+  padding: 0.2rem 0.3rem;
+}
